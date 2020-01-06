@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: 'Georgia';
+  src: url("../fonts/georgiai.eot");
+  src: local("☺"), url("../assets/fonts/georgiai.woff") format("woff"), url("../assets/fonts/georgiai.ttf") format("truetype"), url("../assets/fonts/georgiai.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CanterBold';
+  src: url("../fonts/Canter Bold.eot");
+  src: local("☺"), url("../assets/fonts/Canter Bold.woff") format("woff"), url("../assets/fonts/Canter Bold.ttf") format("truetype"), url("../assets/fonts/Canter Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CanterBoldShadow';
+  src: url("../fonts/Canter Bold Shadow.eot");
+  src: local("☺"), url("../assets/fonts/Canter Bold Shadow.woff") format("woff"), url("../assets/fonts/Canter Bold Shadow.ttf") format("truetype"), url("../assets/fonts/Canter Bold Shadow.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-image: url(../img/Body_background.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.poster {
+  background-image: url(../img/poster.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1167px;
+  height: 1773px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.54);
+}
+
+.header {
+  padding-top: 240px;
+}
+.header .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-family: 'CanterBold';
+  color: #f1ede1;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+}
+.header-title__first_row {
+  display: flex;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  font-size: 90px;
+  font-weight: 400;
+}
+.header-title__second_row {
+  display: flex;
+  font-family: "Canter Bold";
+  font-size: 93px;
+}
+.header-title__third_row {
+  display: flex;
+  font-family: "Canter Bold";
+  font-size: 44px;
+}
+.header-timer {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+  color: #f7f5ee;
+  font-family: "Canter Bold";
+  font-size: 70px;
+  font-weight: 400;
+}
+.header-timer__text {
+  margin-top: -9px;
+  display: flex;
+  color: #f4f0e4;
+  font-family: "Canter Bold";
+  font-size: 35px;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+.header-timer .days-text {
+  margin-right: 75px;
+}
+.header-timer .hours-text {
+  margin-left: -32px;
+}
+.header-timer .min-text {
+  margin-left: 48px;
+}
+.header-timer .position {
+  margin-left: -15px;
+  display: inline-block;
+  background-image: url(../img/digit-bg.png);
+  background-repeat: no-repeat;
+  width: 49px;
+  height: 84px;
+  position: relative;
+}
+.header-timer .digit {
+  position: absolute;
+  top: -9px !important;
+  right: 7px;
+}
+.header-timer .countDays {
+  margin-left: 15px;
+}
+.header-timer .countHours {
+  margin-left: 40px;
+}
+.header-timer .countMinutes {
+  margin-left: 40px;
+}
+
+.footer {
+  margin-top: 350px;
+  padding-bottom: 45px;
+}
+.footer-title {
+  color: #515253;
+  font-family: "Canter Bold";
+  font-size: 72px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+.footer .map {
+  float: left;
+}
+.footer-content {
+  height: 305px;
+}
+.footer-content__form {
+  float: right;
+  z-index: 1;
+  background-image: url(../img/form-bg.png);
+  background-repeat: no-repeat;
+  width: 510px;
+  height: 300px;
+  position: relative;
+}
+.footer-content__form_name {
+  z-index: 2;
+  background: transparent;
+  border-left: 1px solid rgba(246, 169, 169, 0.47);
+  padding-left: 5px;
+  color: #a9a49e;
+  font-family: 'Georgia';
+  font-size: 14px;
+  font-style: italic;
+  height: 20px;
+  width: 170px;
+  position: absolute;
+  top: 80px;
+  right: 260px;
+}
+.footer-content__form_email {
+  z-index: 2;
+  background: transparent;
+  border-left: 1px solid rgba(246, 169, 169, 0.47);
+  padding-left: 5px;
+  color: #a9a49e;
+  font-family: 'Georgia';
+  font-size: 14px;
+  font-style: italic;
+  height: 20px;
+  width: 170px;
+  position: absolute;
+  top: 80px;
+  right: 40px;
+}
+.footer-content__form_textarea {
+  z-index: 2;
+  background: transparent;
+  border-left: 1px solid rgba(246, 169, 169, 0.47);
+  height: 60px;
+  width: 400px;
+  padding-left: 5px;
+  color: #a9a49e;
+  font-family: 'Georgia';
+  font-size: 14px;
+  font-style: italic;
+  resize: none;
+  position: absolute;
+  top: 125px;
+  right: 30px;
+}
+.footer-content__form_submit {
+  background: transparent;
+  color: #000;
+  font-family: 'CanterBoldShadow';
+  font-size: 31px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 43px;
+  right: 220px;
+}
+
+.point {
+  width: 14px;
+  height: 21px;
+  text-shadow: 1px 1px 0 #ffffff;
+  margin-top: 5px;
+}
+
+.adress {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-shadow: 1px 1px 0 #ffffff;
+  color: #4c555d;
+  font-family: 'Georgia';
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 35px;
+}
+.adress-container {
+  max-width: 200px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-right: 75px;
+}
+.social-links .link {
+  margin-left: 54px;
+}
+.social-links .social-link {
+  width: 37px;
+  height: 37px;
+}
